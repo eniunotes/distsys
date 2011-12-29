@@ -1,0 +1,59 @@
+\documentclass[CJK]{beamer}
+\usepackage{CJKutf8}
+\usetheme{Berkeley}
+
+
+\title{会话什么的}
+
+\author{牛津}
+\date{December 25, 2011}
+\institute[2011]{中科院声学所 网络新媒体}
+
+
+\begin{document}
+\begin{CJK}{UTF8}{gbsn}
+\frame{\titlepage}
+
+\section[Outline]{}
+\frame{\tableofcontents}
+
+\section{Introduction}
+
+\frame {
+	\frametitle{First Frame啊可以了}
+	\begin{itemize}
+		\item<1->One good argument
+		\item<2->Another good argument, after one click
+		\item<3->Last one, after another click
+	\end{itemize}
+}
+
+\section{Next Section}
+
+\subsection{First Sub Section}
+
+\frame {
+	\frametitle{Second Frame}
+	This text will stay on all pages.
+	\only<1>{
+		\begin{itemize}
+			\item<1->This will only appear on the first page
+			\item<1->This is also only for the first page
+		\end{itemize}
+	}
+	\only<2>{
+		\begin{itemize}
+			\item<2->This will only appear on the second page
+		\item<2->This is also only for the second page
+		\end{itemize}
+      }
+}
+
+\subsection{Second Sub Section}
+
+\frame {
+	\frametitle{Last Frame}
+	This is the last frame
+}
+\end{CJK}
+\end{document}
