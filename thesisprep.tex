@@ -1,0 +1,179 @@
+\documentclass[•]{article}
+\usepackage{indentfirst}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage[dvipdfm]{hyperref} 
+\usepackage{enumerate}
+\pagecolor{GreenYellow}
+
+
+
+
+\begin{document}
+
+
+
+\section{def of session}
+
+session is a live interaction between client and server
+
+\begin{itemize}
+\item length: vod(several min to 1~2 hour)
+\item relation of network entity: c/s(e.g. vod, sdv), p2p(p2p video streaming)
+\item participants count(entity in session info): 1(vod, sdv), 2(voice call, video conference), 3 or more(video conference, video streaming)
+\item control message transfer characteristics
+\item real-time(sip, rtsp) or ?
+
+\end{itemize}
+
+www
+
+
+\section{what we store}
+\begin{itemize}
+\item in a vod system
+\subitem sid
+\subitem timestamps(start, end)
+\subitem ** session layer, request layer intervalss \cite{Garcia2009}
+\subitem media desc related to netres alloc(e.g. max bitrate)
+
+\item in a sdv system
+\subitem sid
+\subitem sharing users(realtime)
+\subitem media desc related to netres alloc(e.g. max bitrate)
+
+
+\end{itemize}
+
+\section{what we get}
+contentid, viewcount, avgduration?, ?
+
+some text
+
+
+\section{related work}
+
+\subsection{sip auth}
+method:\\
+\begin{enumerate}[a.]
+\item local db \cite{Nahum2007}
+\item credentials in remote db
+\item remote service(e.g. RADIUS)
+\end{enumerate}
+
+state of art\cite{Dacosta2011}:
+mostly talk about a, less talk about b and c
+
+\cite{Dacosta2011} talk about b: batch auth and etc. In this senario, remote auth server send user credential to sip proxy and the proxy perform the check. the choose this way "because it is the one typically used in Digest authentication." 
+
+our sys use method c:
+
+check perf impact
+
+method: log latency manually or oprofile cpu? oprofile apply only to local?
+
+
+
+RADIUS Authentication for Cisco SPS:
+
+http://www.cisco.com/en/US/docs/voice\_ip\_comm/sip/proxies/2.2/radius/guide/radauth.html
+
+http://www.voip-info.org/wiki/view/SIP+Authentication
+
+\subsubsection{problem}
+proxies(or entity in control plane?) are often distributed across a wide geographic area in order to minimize latency between themselves and clients(for real time service?). but auth service are often centralized(what does this mean?) at another place which will lead to "call" throughput degration  due to network latency\cite{Dacosta2011}
+
+//search "scalable authentication"!
+
+\begin{itemize}
+\item perf eval of method c of auth in session mgmt
+
+most of current research of auth perf issue in session management talks about sip, which is real-time as well as rtsp, but most are colocated with sm(method a), or return credentials directly, the effect of remote service is not talked yet to my knowledge(make sure).
+\end{itemize}
+
+//sip auth register, invite and bye, what about rtsp?
+
+//moreover, digest often, but xml over http not evaluated?
+
+
+
+
+
+
+\subsection{sip server perf}
+\begin{itemize}
+\item \cite{Nahum2007}
+\subitem security mechanism use or not --- 1:4
+\subitem sf/sl proxy perf diff --- 1:2
+\subitem tcp or udp --- 1:3
+
+
+
+
+\end{itemize}
+
+\section{think about our sys}
+\begin{itemize}
+\item serve for: video service
+\end{itemize}
+
+\begin{itemize}
+\item perf
+\subitem 
+\end{itemize}
+
+
+\section{possible big open issues}
+\begin{itemize}
+\item overload control
+\item security
+\item scalability("as a cloud")
+\end{itemize}
+
+\subsection{overload control}
+
+\subsection{security}
+
+\subsection{single server perf}
+
+search "sip load" in google!
+
+\subsection{scalability("as a cloud")}
+\subsubsection{scalability of sip server}
+classical architecture for big load and/or good scalability: three tier \cite{Kim2011}
+
+\subsubsection{todo}
+search papers citing \cite{Vaquero2011}
+
+
+\section{possible small open issues}
+\begin{itemize}
+\item session transfer
+\end{itemize}
+
+search youtube! see real problem!
+think about hosting both video recommendation and video streaming
+think about log analysis of video (what sm should log and what to extract?)
+
+
+
+\section{keyword}
+
+sip scalability
+
+session protocol sip rtsp
+
+sip key-value store
+
+vod "key-value" store
+
+video streaming “nosql"
+
+"video streaming" “bigtable"
+
+
+\bibliographystyle{plain}
+\bibliography{library}
+
+\end{document}
+
+
