@@ -123,19 +123,34 @@ most of current research of auth perf issue in session management talks about si
 
 
 \section{possible big open issues}
-\begin{itemize}
-\item overload control
-\item security
-\item scalability("as a cloud")
-\end{itemize}
+outline here
+
+\section{specific issue}
 
 \subsection{overload control}
 
-\subsection{security}
+\subsubsection{sota}
+SIP: most voice service, so most UA to UA (many2many)
 
-\subsection{single server perf}
+Web: most UA to server or cluster(same kind? maybe diff server---e.g. img and html?)
 
-search "sip load" in google!
+here: UA to some server (many2some) "some" is diff or same?
+
+\subsubsection{detection}
+estimate load incurred when diff kind of service request comes
+(e.g. for sdv: es\_req+respX1, es\_hbXx, m1m2X1)
+
+\subsubsection{control}
+when overloaded, drop service A request or service B request?
+
+
+\subsubsection{ref}
+SIP: \cite{Hilt2008}
+
+WebServer: \cite{Iyer}
+
+ned: \cite{Hong2010}, etc under distsys/overload category
+
 
 \subsection{scalability("as a cloud")}
 \subsubsection{scalability of sip server}
@@ -143,6 +158,25 @@ classical architecture for big load and/or good scalability: three tier \cite{Ki
 
 \subsubsection{todo}
 search papers citing \cite{Vaquero2011}
+
+\subsection{auth}
+
+\subsubsection{measure the perf penalty incurred when using security mech}
+
+according to \cite{Nahum2007}:
+security mechanism use or not — 1:4
+
+what about here
+
+diff of this sys and other sys
+
+\subsection{security}
+
+\subsection{single server perf}
+
+search "sip load" in google!
+
+
 
 
 \section{possible small open issues}
