@@ -143,6 +143,16 @@ estimate load incurred when diff kind of service request comes
 \subsubsection{control}
 when overloaded, drop service A request or service B request?
 
+when overloaded/near overload, forbit new session setup or msg following session setup?
+
+\subsubsection{metric}
+measure:\cite{Shen2010}
+
+\begin{itemize}
+\item throughput (ACK received per second at server) (i.e. cps????)
+\item delay(from INVITE sent to OK received at client)
+\item other---cpu util, mps
+\end{itemize}
 
 \subsubsection{ref}
 SIP: \cite{Hilt2008}
