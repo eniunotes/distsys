@@ -3,7 +3,7 @@
 \usetheme{Berkeley}
 
 
-\title{xxxx}
+\title{视频会话管理关键技术研究}
 \author{www}
 \date{导师：倪宏}
 \institute[2011]{中科院声学所 网络新媒体}
@@ -20,9 +20,10 @@
 
 \subsection{背景}
 
+
 \frame {
-	\frametitle{aaa}
-	aweasdasdzcs
+	\frametitle{背景}
+	视频业务
 }
 
 \section{研究内容}
@@ -31,11 +32,11 @@
 \subsection{性能评估}
 
 \frame {
-	\frametitle{性能评估\cite{Nahum2007}}
+	\frametitle{性能评估}
 	\only<1->{
 	内容
 	\begin{itemize}
-		\item 对会话请求的处理过程进行分析，评估各处理步骤的时间开销所占比例
+		\item 评估会话请求各处理步骤的时间开销所占比例
 		\item 评估传输协议的选择对性能的影响
 		\item 评估认证与否的选择对性能的影响
 	\end{itemize}
@@ -49,88 +50,80 @@
 	}
 	\only<3>{
 	创新点
-	xxx
+	暂无
 	}
 }
 
-\subsection{过载控制}
+\subsection{过载监测和控制}
 
 \frame {
-	\frametitle{过载控制}
+	\frametitle{过载监测和控制}
 	\only<1->{
 	内容
 	\begin{itemize}
-		\item aaa
-		\item bbb
-		\item ccc
+		\item 根据各消息队列的实时情况估计系统的负载情况，以监测过载发生/将要发生
+		\item 协同的过载控制
 	\end{itemize}
 	}
 	\only<2->{
 	意义
 	\begin{itemize}
-	\item w
-	\item x
+	\item 减少过载情况下性能的下降
+	\item 负载情况的估计是动态扩展的基础之一
 	\end{itemize}
 	}
 	\only<3>{
 	创新点
-	xxx
+	暂无
 	}
 }
 
-\subsection{自动扩展}
+\subsection{动态扩展}
 
 \frame {
-	\frametitle{自动扩展}
+	\frametitle{动态扩展}
 	\only<1->{
 	内容
 	\begin{itemize}
-		\item aaa
-		\item bbb
-		\item ccc
+		\item 扩展控制器如何保证系统的可扩展性
 	\end{itemize}
 	}
 	\only<2->{
 	意义
 	\begin{itemize}
-	\item w
-	\item x
+		\item 简化系统维护
+		\item 符合云的概念
 	\end{itemize}
 	}
 	\only<3>{
 	创新点
-	xxx
+	\begin{itemize}
+		\item 根据不同业务的负载情况动态调整负载均衡策略参数及阈值
+	\end{itemize}
 	}
 }
 
-\section{Next Section}
 
-\subsection{First Sub Section}
+\section{已完成工作}
 
 \frame {
-	\frametitle{Second Frame}
-	This text will stay on all pages.
+	\frametitle{已完成工作}
 	\only<1>{
 		\begin{itemize}
-			\item<1->This will only appear on the first page
-			\item<1->This is also only for the first page
+			\item<1->开放业务平台：会话管理服务器的调研和开发、跨域认证的调研、用户位置服务的设计、(参与)开放接口的设计和开放接口网关的设计和实现、(参与)交互服务器的设计、用户生成业务的调研、申请书中IMS和Parlay及Web2.0的调研、申请书中用户生成业务的调研和相关内容的撰写;
+			\item<1->NGOSS：业务订购功能的升级；
+			\item<1->融合通道网关：通道测试协议的设计。
 		\end{itemize}
 	}
-	\only<2>{
-		\begin{itemize}
-			\item<2->This will only appear on the second page
-		\item<2->This is also only for the second page
-		\end{itemize}
-      }
 }
 
-\subsection{Second Sub Section}
+\section{参考文献}
 
 \frame {
-	\frametitle{Last Frame}
-	This is the last frame
+	\frametitle{参考文献}
 	\bibliographystyle{plain}
 	\bibliography{library}
+	\cite{Nahum2007}\cite{Shen2010}\cite{Vaquero2011}\cite{Kim2011}\cite{Wang2010}\cite{Ohta2009}\cite{Hilt2008}\cite{Shen2008}\cite{Sisalem2011a}
 }
 \end{CJK}
 \end{document}
